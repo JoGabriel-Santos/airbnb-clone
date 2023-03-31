@@ -1,0 +1,92 @@
+/* ----------- HEADER ----------- */
+
+.header {
+    align-items: center;
+    border-bottom: rgba(51, 51, 51, 0.20) 1px solid;
+    color: #333;
+    display: flex;
+    height: 8rem;
+    justify-content: space-between;
+    padding: 0 7.8rem;
+}
+
+.logo {
+    height: 3.2rem;
+}
+
+.header-options {
+    align-items: center;
+    border: rgba(51, 51, 51, 0.28) 1px solid;
+    border-radius: 50px;
+    display: flex;
+    gap: 2rem;
+    padding: .8rem 2rem;
+    transition: .4s ease;
+}
+
+.header-options:hover {
+    box-shadow: rgba(16, 16, 16, 0.4) 0 0 4px 0;
+    cursor: pointer;
+}
+
+.header-options--text {
+    font-size: 1.4rem;
+    font-weight: 600;
+}
+
+.header-options--text.border {
+    border-left: rgba(51, 51, 51, 0.28) 1px solid;
+    border-right: rgba(51, 51, 51, 0.28) 1px solid;
+    padding: .6rem 2.2rem;
+}
+
+.header-options--text.fw-500 {
+    color: rgba(51, 51, 51, 0.6);
+    font-weight: 500;
+}
+
+.header-options--search {
+    background-color: #FF385C;
+    border-radius: 20px;
+    display: flex;
+    padding: 1rem;
+}
+
+.header-options--search img {
+    height: 1.2rem;
+}
+
+.header-user {
+    align-items: center;
+    display: flex;
+    gap: 2rem;
+}
+
+.header-user--home {
+    font-size: 1.4rem;
+    font-weight: 500;
+}
+
+.header-user--info {
+    align-items: center;
+    border: rgba(51, 51, 51, 0.28) 1px solid;
+    border-radius: 50px;
+    display: flex;
+    gap: 2rem;
+    padding: .5rem .6rem;
+    transition: .4s ease;
+}
+
+.header-user--info:hover {
+    box-shadow: rgba(16, 16, 16, 0.4) 0 0 4px 0;
+    cursor: pointer;
+}
+
+.header-user--menu {
+    height: 1.6rem;
+    margin-left: 6px;
+}
+
+.header-user--profile {
+    height: 3rem;
+}
