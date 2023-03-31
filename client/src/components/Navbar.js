@@ -11,7 +11,7 @@ function Navbar() {
             <div className="header-options">
                 <h4 className="header-options--text">Anywhere</h4>
                 <h4 className="header-options--text border">Any week</h4>
-                <h4 className="header-options--text fw-500">Add guests</h4>
+                <h4 className="header-options--text fw-400">Add guests</h4>
 
                 <div className="header-options--search">
                     <img src={require("../util/images/search.png")} alt=""/>

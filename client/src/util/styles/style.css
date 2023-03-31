@@ -11,7 +11,7 @@
 }
 
 .logo {
-    height: 3.2rem;
+    width: 10.2rem;
 }
 
 .header-options {
@@ -20,7 +20,8 @@
     border-radius: 50px;
     display: flex;
     gap: 2rem;
-    padding: .8rem 2rem;
+    margin-left: 18rem;
+    padding: .8rem 1rem .8rem 2rem;
     transition: .4s ease;
 }
 
@@ -31,7 +32,7 @@
 
 .header-options--text {
     font-size: 1.4rem;
-    font-weight: 600;
+    font-weight: 500;
 }
 
 .header-options--text.border {
@@ -40,9 +41,9 @@
     padding: .6rem 2.2rem;
 }
 
-.header-options--text.fw-500 {
-    color: rgba(51, 51, 51, 0.6);
-    font-weight: 500;
+.header-options--text.fw-400 {
+    color: rgba(51, 51, 51, 0.68);
+    font-weight: 400;
 }
 
 .header-options--search {
