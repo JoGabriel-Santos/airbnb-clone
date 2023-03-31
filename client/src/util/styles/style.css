@@ -185,12 +185,130 @@
     cursor: pointer;
 }
 
-.button-filters img {
-
-}
-
 .button-filters--description {
     color: #333;
     font-size: 1.2rem;
     font-weight: 400;
+}
+
+/* ----------- TOTAL PRICE ----------- */
+
+.section-total-price {
+    margin: 0 auto;
+    max-width: 60rem;
+    padding-top: 1.5rem;
+}
+
+.total-price {
+    align-items: center;
+    border: rgba(51, 51, 51, 0.20) 1px solid;
+    border-radius: 12px;
+    display: flex;
+    justify-content: space-between;
+    margin: auto;
+    padding: 1.6rem 1.8rem;
+    transition: .4s ease;
+}
+
+.total-price--description {
+    align-items: center;
+    display: flex;
+}
+
+.total-price--text {
+    color: #333;
+    font-size: 1.5rem;
+    font-weight: 500;
+    padding-right: 2.2rem;
+}
+
+.total-price--paragraph {
+    color: #333;
+    font-size: 1.5rem;
+    font-weight: 500;
+    padding: .6rem 2.2rem;
+}
+
+.total-price--paragraph.border {
+    border-left: rgba(51, 51, 51, 0.28) 1px solid;
+}
+
+.switch {
+    display: inline-block;
+    height: 34px;
+    position: relative;
+    width: 60px;
+}
+
+.switch input {
+    height: 0;
+    opacity: 0;
+    width: 0;
+}
+
+.slider {
+    background-color: #ccc;
+    bottom: 0;
+    cursor: pointer;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    transition: .4s;
+    -webkit-transition: .4s;
+}
+
+.slider:before {
+    -webkit-transition: .4s;
+    background-color: white;
+    bottom: 4px;
+    content: "";
+    height: 26px;
+    left: 4px;
+    position: absolute;
+    transition: .4s;
+    width: 26px;
+}
+
+input:checked + .slider {
+    background-color: #222;
+}
+
+input:checked + .slider:before {
+    transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    -webkit-transform: translateX(26px);
+}
+
+.slider.round {
+    border-radius: 34px;
+}
+
+.slider.round:before {
+    border-radius: 50%;
+}
+
+.slider.round:after {
+    background-color: white;
+    border-radius: 50%;
+    content: '';
+    height: 26px;
+    left: 4px;
+    position: absolute;
+    top: 4px;
+    transition: .4s;
+    width: 26px;
+    -webkit-transition: .4s;
+}
+
+input:checked + .slider.round:before {
+    transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    -webkit-transform: translateX(26px);
+}
+
+input:checked + .slider.round:after {
+    transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    -webkit-transform: translateX(26px);
 }
