@@ -97,7 +97,7 @@
 .section-filters {
     display: flex;
     flex-wrap: nowrap;
-    gap: 4.2rem;
+    gap: 3.2rem;
     overflow: hidden;
     width: 100%;
 }
@@ -149,10 +149,17 @@
     border-radius: 50px;
     cursor: pointer;
     display: flex;
-    margin: 0 2rem;
     opacity: .8;
     padding: .6rem;
     transition: .4s all ease;
+}
+
+.navigation-buttons.left {
+    margin-right: 2rem;
+}
+
+.navigation-buttons.right {
+    margin: 0 2rem;
 }
 
 .navigation-buttons button:hover {

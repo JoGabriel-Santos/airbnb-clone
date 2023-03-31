@@ -25,7 +25,7 @@ function Filters() {
 
     return (
         <div className="section-filters-container">
-            <div className="navigation-buttons">
+            <div className="navigation-buttons left">
                 <button onClick={() => handleNavigation("left")}>
                     <img src={require("../util/images/left-arrow.png")} alt=""/>
                 </button>
@@ -42,7 +42,7 @@ function Filters() {
                 }
             </section>
 
-            <div className="navigation-buttons">
+            <div className="navigation-buttons right">
                 <button onClick={() => handleNavigation("right")}>
                     <img src={require("../util/images/right-arrow.png")} alt=""/>
                 </button>
