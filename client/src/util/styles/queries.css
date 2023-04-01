@@ -1,0 +1,76 @@
+/* Below 1620px (Smaller desktops) */
+
+@media (max-width: 1620px) {
+    html {
+        font-size: 56.25% !important;
+    }
+}
+
+/* Below 1366px */
+
+@media (max-width: 1366px) {
+    .rooms-grid {
+        grid-template-columns: repeat(5, 1fr) !important;
+    }
+}
+
+/* Below 1200px (Landscape tablets) */
+
+@media (max-width: 1200px) {
+    .rooms-grid {
+        grid-template-columns: repeat(4, 1fr) !important;
+    }
+}
+
+/* Below 1030px */
+
+@media (max-width: 1030px) {
+    .header-options {
+        margin-left: 0 !important;
+    }
+
+    .rooms-grid {
+        grid-gap: 18px !important;
+        grid-template-columns: repeat(3, 1fr) !important;
+    }
+}
+
+/* Below 940px (Tablets) */
+
+@media (max-width: 940px) {
+    html {
+        font-size: 50% !important;
+    }
+}
+
+/* Below 860px */
+
+@media (max-width: 860px) {
+    .header {
+        display: none !important;
+    }
+
+    .section-filters-container {
+        padding: 1rem 5rem !important;
+    }
+
+    .section-rooms {
+        padding: 2.2rem 5rem !important;
+    }
+}
+
+/* Below 704 (Smaller tablets) */
+
+@media (max-width: 704px) {
+    .rooms-grid {
+        grid-template-columns: repeat(2, 1fr) !important;
+    }
+}
+
+/* Below 426 (Phones) */
+
+@media (max-width: 426px) {
+    .rooms-grid {
+        grid-template-columns: repeat(1, 1fr) !important;
+    }
+}

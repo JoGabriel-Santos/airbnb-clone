@@ -1,14 +1,31 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 
 import Filters from "./Filters";
 
 function Navbar() {
+    const [isSmallScreen, setIsSmallScreen] = useState(false);
+
+    useEffect(() => {
+        const mediaQuery = window.matchMedia('(max-width: 1200px)');
+        setIsSmallScreen(mediaQuery.matches);
+
+        const handleMediaQueryChange = (e) => setIsSmallScreen(e.matches);
+        mediaQuery.addListener(handleMediaQueryChange);
+
+        return () => mediaQuery.removeListener(handleMediaQueryChange);
+    }, []);
 
     return (
         <React.Fragment>
             <header className="header">
                 <a href="">
-                    <img className="logo" src={require("../util/images/logo.png")} alt=""/>
+                    {
+                        !isSmallScreen ? (
+                            <img className="logo" src={require("../util/images/logo.png")} alt=""/>
+                        ) : (
+                            <img className="logo-small" src={require("../util/images/logo-2.png")} alt=""/>
+                        )
+                    }
                 </a>
 
                 <div className="header-options">
