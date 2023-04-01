@@ -312,3 +312,81 @@ input:checked + .slider.round:after {
     -ms-transform: translateX(26px);
     -webkit-transform: translateX(26px);
 }
+
+/* ----------- ROOMS ----------- */
+
+.section-rooms {
+    padding: 2.2rem 7.8rem;
+}
+
+.rooms-grid {
+    display: grid;
+    grid-gap: 24px;
+    grid-template-columns: repeat(6, 1fr);
+}
+
+.card-room {
+    cursor: pointer;
+}
+
+.card-room--photo {
+    border-radius: 12px;
+    height: 26rem;
+    object-fit: cover;
+    width: 100%;
+}
+
+.card-room--info-rating {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1.5rem;
+}
+
+.card-room--info {
+    display: flex;
+    flex-direction: column;
+    gap: .8rem;
+}
+
+.info-city {
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+
+.info-location,
+.info-duration {
+    color: rgba(51, 51, 51, 0.75);
+    font-size: 1.4rem;
+    font-weight: 400;
+}
+
+.room-price {
+    align-items: baseline;
+    display: flex;
+    gap: .5rem;
+}
+
+.info-price {
+    font-size: 1.6rem;
+    font-weight: 500;
+    margin-top: 5px;
+}
+
+.info-price--description {
+    font-size: 1.6rem;
+    font-weight: 300;
+}
+
+.card-room--rating {
+    display: flex;
+    gap: .2rem;
+}
+
+.card-room--rating img {
+    height: 1.5rem;
+}
+
+.rating {
+    font-size: 1.6rem;
+    font-weight: 300;
+}
