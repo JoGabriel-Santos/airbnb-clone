@@ -61,6 +61,8 @@
     align-items: center;
     display: flex;
     gap: 2rem;
+    user-select: none;
+    position: relative;
 }
 
 .header-user--home {
@@ -90,6 +92,57 @@
 
 .header-user--profile {
     height: 3rem;
+}
+
+.header-user--options {
+    background-color: #fff;
+    border-radius: 20px;
+    box-shadow: rgba(16, 16, 16, 0.4) 0 0 4px 0;
+    position: absolute;
+    right: 0;
+    top: 50px;
+    width: 24rem;
+    z-index: 1;
+}
+
+.options-list {
+    list-style: none;
+    margin: 0;
+    padding: 1rem;
+}
+
+.options-list li {
+    padding: 1.5rem;
+}
+
+.options-list li:nth-child(2) {
+    border-bottom: rgba(51, 51, 51, 0.28) 1px solid;
+    margin-bottom: .3rem;
+    padding-bottom: 1.9rem;
+}
+
+.option {
+    cursor: pointer;
+    font-size: 1.4rem;
+    font-weight: 400;
+    opacity: .8;
+    padding: 10px;
+    transition: .3s all;
+}
+
+.option:hover {
+    opacity: 1;
+}
+
+.show-menu{
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    left: 50%;
+    padding: 2rem;
+    position: fixed;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 9999;
 }
 
 /* ----------- FILTERS ----------- */
@@ -196,7 +249,7 @@
 .section-total-price {
     margin: 0 auto;
     max-width: 60rem;
-    padding-top: 1.5rem;
+    padding: 1.5rem 5rem 0 5rem;
 }
 
 .total-price {
