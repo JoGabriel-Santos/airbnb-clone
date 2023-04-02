@@ -1,6 +1,6 @@
 import React from "react";
 
-function Room() {
+function Rooms() {
 
     return (
         <div className="card-room">
@@ -27,4 +27,4 @@ function Room() {
     )
 }
 
-export default Room;
+export default Rooms;

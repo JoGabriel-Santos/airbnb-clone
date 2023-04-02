@@ -2,7 +2,7 @@ import React from "react";
 
 import Navbar from "../components/Navbar";
 import CheckboxSwitch from "../components/Switch";
-import Room from "../components/Room";
+import Rooms from "../components/Rooms";
 
 function Home() {
 
@@ -28,12 +28,12 @@ function Home() {
 
             <section className="section-rooms">
                 <div className="rooms-grid">
-                    <Room/>
-                    <Room/>
-                    <Room/>
-                    <Room/>
-                    <Room/>
-                    <Room/>
+                    <Rooms/>
+                    <Rooms/>
+                    <Rooms/>
+                    <Rooms/>
+                    <Rooms/>
+                    <Rooms/>
                 </div>
             </section>
         </React.Fragment>
