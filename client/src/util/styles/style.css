@@ -591,3 +591,126 @@ input:checked + .slider.round:after {
     display: flex;
     gap: .8rem;
 }
+
+.room--images {
+    border-radius: 12px;
+    margin: 2.8rem 0;
+    overflow: hidden;
+}
+
+.images-grid-2,
+.images-grid-4 {
+    display: grid;
+    column-gap: 1rem;
+    row-gap: 1rem;
+}
+
+.images-grid-2 {
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.images-grid-4 {
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.image-big {
+    height: 57rem;
+    object-fit: cover;
+    width: 100%;
+}
+
+.image-small {
+    height: 28rem;
+    object-fit: cover;
+    width: 100%;
+}
+
+.reserve {
+
+}
+
+.room-reserve {
+    display: grid;
+    grid-template-columns: 10fr 7fr;
+}
+
+.reserve--host {
+    align-items: center;
+    border-bottom: rgba(51, 51, 51, 0.28) 1px solid;
+    display: flex;
+    justify-content: space-between;
+    padding: 2rem 0;
+}
+
+.host-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.host-title {
+    font-size: 2.2rem;
+    font-weight: 400;
+}
+
+.host-benefits {
+    display: flex;
+    margin: 1rem 0;
+}
+
+.benefits {
+    font-size: 1.6rem;
+    font-weight: 400;
+}
+
+.host-image {
+    border-radius: 50px;
+    width: 5.6rem;
+}
+
+.reserve--info {
+
+}
+
+.info--aircover {
+    border-bottom: rgba(51, 51, 51, 0.28) 1px solid;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 2rem 0;
+}
+
+.info--aircover img {
+    width: 12.4rem;
+}
+
+.aircover-paragraph {
+    font-size: 1.6rem;
+}
+
+.aircover-more {
+    cursor: pointer;
+    font-size: 1.6rem;
+    text-decoration: underline;
+}
+
+.info--detailed {
+    font-size: 1.6rem;
+    font-weight: 400;
+    line-height: 2.4rem;
+    padding: 2rem 0;
+}
+
+.show-more {
+    align-items: center;
+    cursor: pointer;
+    display: flex;
+    font-size: 1.6rem;
+    gap: .5rem;
+    margin-top: 1.5rem;
+    text-decoration: underline;
+}
+
+.show-more img{
+    width: 12px;
+}
+
