@@ -83,7 +83,7 @@ function Navbar() {
             </header>
 
             {
-                showLogin && <Login/>
+                showLogin && <Login closeLogin={toggleShowLogin}/>
             }
 
             <div
@@ -92,6 +92,7 @@ function Navbar() {
                     position: "fixed",
                     pointerEvents: showLogin ? "auto" : "none",
                     transition: "background-color .4s ease-in-out",
+                    zIndex: "999",
                     top: 0,
                     left: 0,
                     right: 0,
