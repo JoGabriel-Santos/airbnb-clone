@@ -10,7 +10,7 @@
     padding: 0 7.8rem;
 }
 
-.header--room{
+.header--room {
     padding: 0 40rem;
 }
 
@@ -50,7 +50,7 @@
     font-weight: 400;
 }
 
-.header-options--text.mr-10{
+.header-options--text.mr-10 {
     margin-right: 8.8rem;
 }
 
@@ -533,12 +533,13 @@ input:checked + .slider.round:after {
 }
 
 .card-room--rating img {
-    height: 1.5rem;
+    height: 1.4rem;
 }
 
 .rating {
-    font-size: 1.6rem;
-    font-weight: 300;
+    color: rgba(51, 51, 51, 0.94);
+    font-size: 1.4rem;
+    font-weight: 600;
 }
 
 /* ----------- ROOM ----------- */
@@ -547,3 +548,46 @@ input:checked + .slider.round:after {
     padding: 3.8rem 40rem;
 }
 
+.room-title {
+    font-size: 2.6rem;
+    font-weight: 400;
+}
+
+.room--info-share-save {
+    align-items: baseline;
+    display: flex;
+    justify-content: space-between;
+}
+
+.room-info {
+    align-items: center;
+    display: flex;
+    gap: .5rem;
+    margin-top: 2rem;
+}
+
+.room-info--reviews,
+.room-info--location,
+.room-info--share,
+.room-info--save {
+    font-weight: 400;
+    text-decoration: underline;
+}
+
+.share-save {
+    align-items: baseline;
+    display: flex;
+    gap: 2rem;
+}
+
+.share-save img {
+    width: 2rem;
+}
+
+.share,
+.save {
+    align-items: center;
+    cursor: pointer;
+    display: flex;
+    gap: .8rem;
+}
