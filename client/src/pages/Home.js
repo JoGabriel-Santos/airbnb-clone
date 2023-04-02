@@ -1,6 +1,5 @@
 import React from "react";
 
-import Navbar from "../components/Navbar";
 import CheckboxSwitch from "../components/Switch";
 import Rooms from "../components/Rooms";
 
