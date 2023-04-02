@@ -1,4 +1,5 @@
-import React, { useEffect, useState } from "react";
+import React, {useEffect, useState} from "react";
+import {useLocation} from "react-router-dom";
 
 import Filters from "./Filters";
 import Login from "./Login";
@@ -8,6 +9,8 @@ function Navbar() {
     const [showLogin, setShowLogin] = useState(false);
     const [bgOpacity, setBgOpacity] = useState(0)
     const [isSmallScreen, setIsSmallScreen] = useState(false);
+
+    const location = useLocation();
 
     function handleMenuClick() {
         setShowMenu(!showMenu);
@@ -36,7 +39,7 @@ function Navbar() {
 
     return (
         <React.Fragment>
-            <header className="header">
+            <header className={`header ${location.pathname === "/room" ? "header--room" : ""}`}>
                 <a href="">
                     {
                         !isSmallScreen ? (
@@ -48,17 +51,38 @@ function Navbar() {
                 </a>
 
                 <div className="header-options">
-                    <h4 className="header-options--text">Anywhere</h4>
-                    <h4 className="header-options--text border">Any week</h4>
-                    <h4 className="header-options--text fw-400">Add guests</h4>
+                    {
+                        location.pathname === "/" ?
+                            <React.Fragment>
+                                <h4 className="header-options--text">Anywhere</h4>
+                                <h4 className="header-options--text border">Any week</h4>
+                                <h4 className="header-options--text fw-400">Add guests</h4>
 
-                    <div className="header-options--search">
-                        <img src={require("../util/images/search.png")} alt=""/>
-                    </div>
+                                <div className="header-options--search">
+                                    <img src={require("../util/images/search.png")} alt=""/>
+                                </div>
+                            </React.Fragment>
+
+                            :
+
+                            <React.Fragment>
+                                <h4 className="header-options--text mr-10">Start your search</h4>
+
+                                <div className="header-options--search">
+                                    <img src={require("../util/images/search.png")} alt=""/>
+                                </div>
+                            </React.Fragment>
+                    }
                 </div>
 
                 <div className="header-user">
-                    <h4 className="header-user--home">Airbnb your home</h4>
+                    {
+                        location.pathname === "/" ?
+                            <h4 className="header-user--home">Airbnb your home</h4>
+                            :
+                            <h4 className="header-user--home">Switch to hosting</h4>
+                    }
+
                     <img className="header-user--region" src={require("../util/images/region.png")} alt=""/>
 
                     <div className="header-user--info" onClick={handleMenuClick}>
@@ -100,7 +124,9 @@ function Navbar() {
                 }}
             />
 
-            <Filters/>
+            {
+                location.pathname === "/" ? <Filters/> : null
+            }
 
         </React.Fragment>
     )

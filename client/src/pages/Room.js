@@ -3,7 +3,9 @@ import React from "react";
 function Room() {
 
     return (
-        <h2>Room</h2>
+        <section className="section-room">
+            <h2>Room</h2>
+        </section>
     )
 }
 
