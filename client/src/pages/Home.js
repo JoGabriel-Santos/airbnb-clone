@@ -8,8 +8,6 @@ function Home() {
 
     return (
         <React.Fragment>
-            <Navbar/>
-
             <section className="section-total-price">
                 <div className="total-price">
                     <div className="total-price--description">
