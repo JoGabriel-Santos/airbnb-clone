@@ -31,6 +31,12 @@ function Home() {
                     <Rooms/>
                     <Rooms/>
                     <Rooms/>
+                    <Rooms/>
+                    <Rooms/>
+                    <Rooms/>
+                    <Rooms/>
+                    <Rooms/>
+                    <Rooms/>
                 </div>
             </section>
         </React.Fragment>
