@@ -11,7 +11,7 @@
 }
 
 .header--room {
-    padding: 0 40rem;
+    padding: 0 4rem;
 }
 
 .logo {
@@ -545,7 +545,7 @@ input:checked + .slider.round:after {
 /* ----------- ROOM ----------- */
 
 .section-room {
-    padding: 3.8rem 40rem;
+    padding: 3.8rem 4rem;
 }
 
 .room-title {

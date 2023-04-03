@@ -23,3 +23,8 @@ html {
 strong {
     font-weight: 500;
 }
+
+.container {
+    margin: 0 auto;
+    max-width: 112rem;
+}

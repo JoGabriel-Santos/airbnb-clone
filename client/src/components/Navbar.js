@@ -39,7 +39,7 @@ function Navbar() {
 
     return (
         <React.Fragment>
-            <header className={`header ${location.pathname === "/room" ? "header--room" : ""}`}>
+            <header className={`header ${location.pathname === "/room" ? "header--room container" : ""}`}>
                 <a href="">
                     {
                         !isSmallScreen ? (

@@ -41,6 +41,10 @@
     html {
         font-size: 50% !important;
     }
+
+    .total-price {
+        display: none !important;
+    }
 }
 
 /* Below 860px */
@@ -57,19 +61,53 @@
     .section-rooms {
         padding: 2.2rem 5rem !important;
     }
+
+    .room-reserve {
+        grid-template-columns: repeat(1, 1fr) !important;
+    }
+
+    .reserve--price {
+        max-width: 38.6rem;
+    }
 }
 
 /* Below 704 (Smaller tablets) */
 
 @media (max-width: 704px) {
+    html {
+        font-size: 42% !important;
+    }
+
     .rooms-grid {
         grid-template-columns: repeat(2, 1fr) !important;
+    }
+
+    .images-grid-2 {
+        grid-template-columns: repeat(1, 1fr) !important;
+    }
+
+    .images-grid-4 {
+        display: none !important;
+    }
+}
+
+@media (max-width: 590px) {
+    .share-save {
+        display: none !important;
+    }
+
+    .reserve--price {
+        margin: 0 auto;
     }
 }
 
 /* Below 426 (Phones) */
 
 @media (max-width: 426px) {
+    html {
+        font-size: 40% !important;
+    }
+
     .rooms-grid {
         grid-template-columns: repeat(1, 1fr) !important;
     }
