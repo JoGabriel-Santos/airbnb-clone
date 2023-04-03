@@ -107,7 +107,7 @@
     border-radius: 20px;
     box-shadow: rgba(16, 16, 16, 0.4) 0 0 4px 0;
     position: absolute;
-    right: 0;
+    right: -2px;
     top: 50px;
     width: 24rem;
     z-index: 1;
@@ -777,7 +777,16 @@ input:checked + .slider.round:after {
 }
 
 .guests {
+    cursor: pointer;
     padding: 1.2rem;
+    position: relative;
+    user-select: none;
+}
+
+.guests--count {
+    font-size: 1.4rem;
+    font-weight: 500;
+    padding: 1rem 0;
 }
 
 input[type="date"] {
@@ -790,7 +799,8 @@ input[type="date"] {
     border-radius: 5px;
     border: rgba(51, 51, 51, 0.28) 1px solid;
     color: #333;
-    font-size: 1.6rem;
+    font-size: 1.4rem;
+    font-weight: 600;
     padding: 1rem;
 }
 
@@ -806,6 +816,58 @@ input[type="date"] {
 
 .guests input::placeholder {
     color: #333;
+}
+
+.option--guest {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+}
+
+.guest-age {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.category-name {
+    font-size: 1.8rem;
+    font-weight: 500;
+}
+
+.category-age {
+    font-size: 1.3rem;
+    font-weight: 400;
+}
+
+.guest-quantity {
+    align-items: center;
+    display: flex;
+}
+
+.quantity-less,
+.quantity-more {
+    align-items: center;
+    border: rgba(51, 51, 51, 0.6) 1px solid;
+    border-radius: 50px;
+    display: flex;
+    padding: .5rem;
+    transition: .3s ease;
+}
+
+.quantity-less:hover,
+.quantity-more:hover {
+    cursor: pointer;
+    border: rgba(51, 51, 51, 1) 1px solid;
+}
+
+.quantity-less img,
+.quantity-more img {
+    width: 1.5rem;
+}
+
+.quantity {
+    margin: 0 1rem;
 }
 
 .reserve-button {
@@ -826,4 +888,18 @@ input[type="date"] {
     font-size: 1.8rem;
     margin: auto;
     padding: 2rem 0;
+}
+
+.options-list--guest li:nth-child(2) {
+    border-bottom: none;
+}
+
+.guest-opacity {
+    cursor: default;
+    opacity: 1;
+}
+
+.width-lg {
+    margin-top: 4rem;
+    width: 38rem;
 }

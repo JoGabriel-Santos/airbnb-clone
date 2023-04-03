@@ -1,6 +1,15 @@
-import React from "react";
+import React, {useState} from "react";
+
+import Guests from "../components/Guests";
 
 function Room() {
+    const [showMenu, setShowMenu] = useState(false);
+
+    function handleMenuClick() {
+        setShowMenu(!showMenu);
+    }
+
+    console.log(showMenu)
 
     return (
         <section className="section-room">
@@ -127,15 +136,21 @@ function Room() {
                             </div>
                         </div>
 
-                        <div className="guests">
-                            <h6>guests</h6>
-                            <select id="guests">
-                                <option value="">1 guest</option>
-                                <option value="">2 guests</option>
-                                <option value="">3 guests</option>
-                                <option value="">4 guests</option>
-                                <option value="">5 guests</option>
-                            </select>
+                        <div className="guests" onClick={handleMenuClick}>
+                            <h6 className="guests--title">guests</h6>
+                            <h5 className="guests--count">1 guest</h5>
+
+                            {
+                                showMenu && (
+                                    <div className="header-user--options width-lg">
+                                        <ul className="options-list options-list--guest">
+                                            <Guests categoryName={"Adults"} categoryAge={"Age 13+"}/>
+                                            <Guests categoryName={"Children"} categoryAge={"Age2 2-12"}/>
+                                            <Guests categoryName={"Infants"} categoryAge={"Under 2"}/>
+                                        </ul>
+                                    </div>
+                                )
+                            }
                         </div>
                     </div>
 
@@ -143,6 +158,7 @@ function Room() {
                         <h5>Reserve</h5>
                     </div>
                 </div>
+
             </div>
         </section>
     )
