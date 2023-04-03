@@ -669,7 +669,7 @@ input:checked + .slider.round:after {
     display: flex;
     flex-direction: column;
     gap: 2rem;
-    padding: 2rem 0;
+    padding: 2rem 0 2.8rem 0;
 }
 
 .info--aircover img {
