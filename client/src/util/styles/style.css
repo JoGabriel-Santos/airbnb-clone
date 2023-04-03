@@ -625,13 +625,10 @@ input:checked + .slider.round:after {
     width: 100%;
 }
 
-.reserve {
-
-}
-
 .room-reserve {
+    column-gap: 10rem;
     display: grid;
-    grid-template-columns: 10fr 7fr;
+    grid-template-columns: 10fr 6fr;
 }
 
 .reserve--host {
@@ -665,10 +662,6 @@ input:checked + .slider.round:after {
 .host-image {
     border-radius: 50px;
     width: 5.6rem;
-}
-
-.reserve--info {
-
 }
 
 .info--aircover {
@@ -710,7 +703,127 @@ input:checked + .slider.round:after {
     text-decoration: underline;
 }
 
-.show-more img{
+.show-more img {
     width: 12px;
 }
 
+.reserve--price {
+    border: rgba(51, 51, 51, 0.28) 1px solid;
+    border-radius: 16px;
+    height: fit-content;
+    padding: 2.4rem;
+}
+
+.price-info {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+}
+
+.price {
+    align-items: baseline;
+    display: flex;
+    gap: 2px;
+}
+
+.price h1 {
+    font-size: 2.2rem;
+    font-weight: 500;
+}
+
+.price h6 {
+    font-size: 1.6rem;
+    font-weight: 400;
+}
+
+.reviews {
+    color: rgba(51, 51, 51, 0.8);
+    font-weight: 400;
+    text-decoration: underline;
+}
+
+.check-in--info {
+    border: rgba(51, 51, 51, 0.40) 1px solid;
+    border-radius: 10px;
+    margin-top: 2.4rem;
+}
+
+.check-in--check-out {
+    display: flex;
+    justify-content: space-between;
+}
+
+.check-in,
+.check-out {
+    padding: 1.2rem;
+}
+
+.check-in h6,
+.check-out h6,
+.guests h6 {
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: 5px;
+    text-transform: uppercase;
+}
+
+.check-in.bb,
+.check-out.bb {
+    border-bottom: rgba(51, 51, 51, 0.28) 1px solid;
+}
+
+.check-in.br {
+    border-right: rgba(51, 51, 51, 0.28) 1px solid;
+}
+
+.guests {
+    padding: 1.2rem;
+}
+
+input[type="date"] {
+    appearance: none;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+}
+
+input[type="date"] {
+    border-radius: 5px;
+    border: rgba(51, 51, 51, 0.28) 1px solid;
+    color: #333;
+    font-size: 1.6rem;
+    padding: 1rem;
+}
+
+.guests select {
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.5rem;
+    font-weight: 400;
+    padding: 1.2rem 0;
+    width: 100%;
+}
+
+.guests input::placeholder {
+    color: #333;
+}
+
+.reserve-button {
+    background-color: #E61E4D;
+    border-radius: 10px;
+    cursor: pointer;
+    display: flex;
+    margin-top: 2.4rem;
+    transition: .3s ease;
+}
+
+.reserve-button:hover {
+    background-color: #E00B41;
+}
+
+.reserve-button h5 {
+    color: white;
+    font-size: 1.8rem;
+    margin: auto;
+    padding: 2rem 0;
+}

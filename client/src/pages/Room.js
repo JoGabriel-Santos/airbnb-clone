@@ -97,10 +97,53 @@ function Room() {
                 </div>
 
                 <div className="reserve--price">
+                    <div className="price-info">
+                        <div className="price">
+                            <h1>$98 USD</h1>
+                            <h6>night</h6>
+                        </div>
 
+                        <div className="rating-reviews">
+                            <div className="card-room--rating">
+                                <img src={require("../util/images/star.png")} alt=""/>
+                                <h4 className="rating">5.0</h4>
+
+                                <img src={require("../util/images/dot.png")} alt=""/>
+                                <h2 className="reviews">40 reviews</h2>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div className="check-in--info">
+                        <div className="check-in--check-out">
+                            <div className="check-in bb br">
+                                <h6>check-in</h6>
+                                <input id="check-in" type="date"/>
+                            </div>
+
+                            <div className="check-out bb">
+                                <h6>check-out</h6>
+                                <input id="check-out" type="date"/>
+                            </div>
+                        </div>
+
+                        <div className="guests">
+                            <h6>guests</h6>
+                            <select id="guests">
+                                <option value="">1 guest</option>
+                                <option value="">2 guests</option>
+                                <option value="">3 guests</option>
+                                <option value="">4 guests</option>
+                                <option value="">5 guests</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div className="reserve-button">
+                        <h5>Reserve</h5>
+                    </div>
                 </div>
             </div>
-
         </section>
     )
 }
