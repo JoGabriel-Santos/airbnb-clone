@@ -25,12 +25,12 @@ function Home() {
 
             <section className="section-rooms">
                 <div className="rooms-grid">
-                    <Rooms/>
-                    <Rooms/>
-                    <Rooms/>
-                    <Rooms/>
-                    <Rooms/>
-                    <Rooms/>
+                    <Rooms image={require("../util/images/room-example.webp")}/>
+                    <Rooms image={require("../util/images/room-example-2.webp")}/>
+                    <Rooms image={require("../util/images/room-example-3.webp")}/>
+                    <Rooms image={require("../util/images/room-example-4.webp")}/>
+                    <Rooms image={require("../util/images/room-example-5.webp")}/>
+                    <Rooms image={require("../util/images/room-example-6.webp")}/>
                 </div>
             </section>
         </React.Fragment>

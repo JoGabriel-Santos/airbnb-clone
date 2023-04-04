@@ -1,10 +1,10 @@
 import React from "react";
 
-function Rooms() {
+function Rooms(props) {
 
     return (
         <div className="card-room">
-            <img className="card-room--photo" src={require("../util/images/room-example.webp")} alt=""/>
+            <img className="card-room--photo" src={props.image} alt=""/>
 
             <div className="card-room--info-rating">
                 <div className="card-room--info">

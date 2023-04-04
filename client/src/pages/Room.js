@@ -42,13 +42,13 @@ function Room() {
 
                 <div className="room--images">
                     <div className="images-grid-2">
-                        <img className="image-big" src={require("../util/images/room-example-2.webp")} alt=""/>
+                        <img className="image-big" src={require("../util/images/room-example.webp")} alt=""/>
 
                         <div className="images-grid-4">
                             <img className="image-small" src={require("../util/images/room-example-2.webp")} alt=""/>
-                            <img className="image-small" src={require("../util/images/room-example-2.webp")} alt=""/>
-                            <img className="image-small" src={require("../util/images/room-example-2.webp")} alt=""/>
-                            <img className="image-small" src={require("../util/images/room-example-2.webp")} alt=""/>
+                            <img className="image-small" src={require("../util/images/room-example-3.webp")} alt=""/>
+                            <img className="image-small" src={require("../util/images/room-example-4.webp")} alt=""/>
+                            <img className="image-small" src={require("../util/images/room-example-5.webp")} alt=""/>
                         </div>
                     </div>
                 </div>
