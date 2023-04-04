@@ -7,7 +7,7 @@ function Guests(props) {
             <div className="option--guest">
                 <div className="guest-age">
                     <h2 className="category-name">{props.categoryName}</h2>
-                    <h5 className="category-age">{props.categoryAge}</h5>
+                    <h5 className="category-ages">{props.categoryAges}</h5>
                 </div>
 
                 <div className="guest-quantity">

@@ -1,4 +1,5 @@
 import React from "react";
+
 import { AnimatePresence, motion } from "framer-motion";
 
 function Login(props) {
@@ -7,10 +8,10 @@ function Login(props) {
         <AnimatePresence>
             <motion.div
                 className="login-container"
-                animate={{ y: 0, opacity: 1 }}
-                initial={{ y: "100vh", opacity: 0 }}
-                exit={{ y: "100vh", opacity: 0 }}
-                transition={{ duration: 0.5 }}
+                animate={{y: 0, opacity: 1}}
+                initial={{y: "100vh", opacity: 0}}
+                exit={{y: "100vh", opacity: 0}}
+                transition={{duration: 0.5}}
             >
 
                 <div className="login-container--content">

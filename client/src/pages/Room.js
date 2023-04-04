@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, { useState } from "react";
 
 import Guests from "../components/Guests";
 
@@ -8,8 +8,6 @@ function Room() {
     function handleMenuClick() {
         setShowMenu(!showMenu);
     }
-
-    console.log(showMenu)
 
     return (
         <section className="section-room">
@@ -145,9 +143,9 @@ function Room() {
                                     showMenu && (
                                         <div className="header-user--options width-lg">
                                             <ul className="options-list options-list--guest">
-                                                <Guests categoryName={"Adults"} categoryAge={"Age 13+"}/>
-                                                <Guests categoryName={"Children"} categoryAge={"Age2 2-12"}/>
-                                                <Guests categoryName={"Infants"} categoryAge={"Under 2"}/>
+                                                <Guests categoryName={"Adults"} categoryAges={"Age 13+"}/>
+                                                <Guests categoryName={"Children"} categoryAges={"Age2 2-12"}/>
+                                                <Guests categoryName={"Infants"} categoryAges={"Under 2"}/>
                                             </ul>
                                         </div>
                                     )
