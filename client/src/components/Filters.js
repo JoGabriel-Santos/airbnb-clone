@@ -1,6 +1,6 @@
 import React, { useRef } from "react";
 
-import data from "../util/dataFilters";
+import data from "../helpers/dataFilters";
 
 function Filters() {
     const sectionRef = useRef(null);

@@ -3,9 +3,9 @@ import ReactDOM from "react-dom/client";
 
 import App from "./App";
 
-import "./util/styles/generic.css";
-import "./util/styles/queries.css";
-import "./util/styles/style.css";
+import "./styles/generic.css";
+import "./styles/queries.css";
+import "./styles/style.css";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(<App/>);
