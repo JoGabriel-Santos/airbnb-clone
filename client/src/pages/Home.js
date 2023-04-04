@@ -1,12 +1,15 @@
 import React from "react";
 
-import CheckboxSwitch from "../components/Switch";
+import Navbar from "../components/Navbar";
 import Rooms from "../components/Rooms";
+import CheckboxSwitch from "../components/Switch";
 
 function Home() {
 
     return (
         <React.Fragment>
+            <Navbar/>
+
             <section className="section-total-price">
                 <div className="total-price">
                     <div className="total-price--description">

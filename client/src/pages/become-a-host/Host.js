@@ -6,11 +6,9 @@ import Page_1 from "./Page_1";
 function Host() {
 
     return (
-        <BrowserRouter>
-            <Routes>
-                <Route path="/page-1" element={<Page_1/>}/>
-            </Routes>
-        </BrowserRouter>
+        <React.Fragment>
+            <h2>Host</h2>
+        </React.Fragment>
     )
 }
 
