@@ -650,6 +650,7 @@ input:checked + .slider.round:after {
 }
 
 .host-benefits {
+    align-items: center;
     display: flex;
     margin: 1rem 0;
 }

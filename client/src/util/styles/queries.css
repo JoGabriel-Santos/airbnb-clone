@@ -67,6 +67,7 @@
     }
 
     .reserve--price {
+        margin-top: 2.2rem;
         max-width: 38.6rem;
     }
 }
@@ -97,7 +98,7 @@
     }
 
     .reserve--price {
-        margin: 0 auto;
+        margin: 2.2rem auto;
     }
 }
 
