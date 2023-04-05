@@ -62,16 +62,6 @@ function Room() {
                             <div className="reserve--host">
                                 <div className="host-info">
                                     <h2 className="host-title">Entire chalet hosted by Alfredo Chaves</h2>
-
-                                    <div className="host-benefits">
-                                        <h2 className="benefits">6 guests</h2>
-                                        <img src={require("../util/images/dot.png")} alt=""/>
-                                        <h2 className="benefits">3 bedrooms</h2>
-                                        <img src={require("../util/images/dot.png")} alt=""/>
-                                        <h2 className="benefits">3 beds</h2>
-                                        <img src={require("../util/images/dot.png")} alt=""/>
-                                        <h2 className="benefits">3 baths</h2>
-                                    </div>
                                 </div>
 
                                 <img className="host-image" src={require("../util/images/host-example.jpg")} alt=""/>

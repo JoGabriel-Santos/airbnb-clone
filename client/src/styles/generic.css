@@ -28,3 +28,8 @@ strong {
     margin: 0 auto;
     max-width: 112rem;
 }
+
+.container-pages {
+    margin: 0 auto;
+    max-width: 144rem;
+}

@@ -28,10 +28,6 @@ const data = [
         description: "Camping"
     },
     {
-        imageSrc: require("../util/icons/castles.jpg"),
-        description: "Castles"
-    },
-    {
         imageSrc: require("../util/icons/design.jpg"),
         description: "Design"
     },

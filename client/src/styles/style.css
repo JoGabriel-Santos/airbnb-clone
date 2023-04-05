@@ -598,6 +598,12 @@ input:checked + .slider.round:after {
     overflow: hidden;
 }
 
+.room--images-m0 {
+    border-radius: 12px;
+    margin: 0;
+    overflow: hidden;
+}
+
 .images-grid-2,
 .images-grid-4 {
     display: grid;
@@ -646,17 +652,6 @@ input:checked + .slider.round:after {
 
 .host-title {
     font-size: 2.2rem;
-    font-weight: 400;
-}
-
-.host-benefits {
-    align-items: center;
-    display: flex;
-    margin: 1rem 0;
-}
-
-.benefits {
-    font-size: 1.6rem;
     font-weight: 400;
 }
 
@@ -903,4 +898,251 @@ input[type="date"] {
 .width-lg {
     margin-top: 4rem;
     width: 38rem;
+}
+
+/* ----------- BECOME A HOST ----------- */
+
+.section--header-scrollbar {
+    align-items: center;
+    color: #333;
+    display: flex;
+    height: 8rem;
+    justify-content: space-between;
+    padding: 0 6rem;
+    position: relative;
+}
+
+.header--buttons {
+    align-items: center;
+    display: flex;
+    gap: 2rem;
+}
+
+.progress-bar {
+    background-color: #ccc;
+    height: .5rem;
+    position: relative;
+}
+
+.progress-bar--fill {
+    background-color: #333;
+    height: 100%;
+    transition: width .5s ease-in-out;
+}
+
+.buttons {
+    border: rgba(51, 51, 51, 0.4) 1px solid;
+    border-radius: 30px;
+    cursor: pointer;
+    font-size: 1.4rem;
+    font-weight: 400;
+    padding: 1rem 1.6rem;
+    transition: .3s ease;
+}
+
+.buttons:hover {
+    border: rgba(51, 51, 51, 0.8) 1px solid;
+}
+
+.buttons-scrollbar {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.button-back a {
+    color: #333;
+    font-size: 1.6rem;
+    font-weight: 500;
+    text-decoration: underline;
+}
+
+.button-next {
+    background-color: #333;
+    border-radius: 6px;
+    color: white;
+    cursor: pointer;
+    font-size: 1.6rem;
+    padding: 1.4rem 3.2rem;
+    transition: .3s ease;
+}
+
+.button-next:hover {
+    background-color: #111;
+}
+
+.section-page {
+    align-items: center;
+    height: calc(100vh - 24.4rem);
+    padding: 0 6rem;
+}
+
+.section-page--center {
+    align-items: center;
+    display: flex;
+    height: calc(100vh - 16.5rem);
+    justify-content: center;
+    padding: 0 6rem;
+}
+
+.page-hero {
+    align-items: center;
+    display: flex;
+    margin-top: 7.8rem;
+}
+
+.info-steps {
+    font-size: 1.6rem;
+    margin-bottom: 1.6rem;
+}
+
+.info-about {
+    font-size: 4.4rem;
+    font-weight: 500;
+    margin-bottom: 2.4rem;
+}
+
+.info-description {
+    font-size: 1.8rem;
+    line-height: 2.8rem;
+}
+
+.flex-col {
+    flex-direction: column;
+}
+
+.hero--title {
+    font-size: 2.5rem;
+    font-weight: 400;
+    margin-bottom: 5rem;
+}
+
+.hero--title-p5 {
+    font-size: 3.2rem;
+    font-weight: 500;
+    margin-bottom: 2rem;
+}
+
+.hero--subtitle {
+    color: rgba(51, 51, 51, 0.8);
+    font-size: 1.8rem;
+    font-weight: 400;
+    margin-bottom: 4rem;
+}
+
+.property-type {
+    display: grid;
+    grid-gap: 24px;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.property-type--card {
+    border: rgba(51, 51, 51, 0.4) 1px solid;
+    border-radius: 12px;
+    cursor: pointer;
+    padding: 1.6rem;
+    transition: .3s ease;
+}
+
+.property-type--card:hover {
+    border: rgba(51, 51, 51, 1) 1px solid;
+}
+
+.property-type--card img {
+    width: 4rem;
+}
+
+.type-description {
+    font-size: 1.6rem;
+    font-weight: 500;
+    margin-top: .5rem;
+}
+
+.hero--header,
+.hero--description {
+    margin-top: 2rem;
+    width: 100%;
+}
+
+.hero--header textarea {
+    border-radius: 12px;
+    color: #333;
+    font-size: 1.8rem;
+    height: 16rem;
+    padding: 2rem;
+    resize: none;
+    min-width: 70rem;
+}
+
+.hero--description textarea {
+    border-radius: 12px;
+    color: #333;
+    font-size: 1.8rem;
+    height: 24rem;
+    padding: 2rem;
+    resize: none;
+    min-width: 70rem;
+}
+
+.hero--price {
+    border: rgba(51, 51, 51, 0.4) 1px solid;
+    border-radius: 12px;
+    padding: 3.2rem;
+}
+
+.hero--price-buttons {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 2rem;
+}
+
+.hero--price-less,
+.hero--price-more {
+    align-items: center;
+    border: rgba(51, 51, 51, 0.4) 1px solid;
+    border-radius: 50px;
+    cursor: pointer;
+    display: flex;
+    padding: 1.5rem;
+    transition: .3s ease;
+}
+
+.hero--price-less:hover,
+.hero--price-more:hover {
+    border: rgba(51, 51, 51, 0.8) 1px solid;
+}
+
+.hero--price-less img,
+.hero--price-more img {
+    width: 2rem;
+}
+
+.price-per-night {
+    align-items: center;
+    border: rgba(51, 51, 51, 0.6) 1px solid;
+    border-radius: 12px;
+    display: flex;
+    margin: 0 12rem;
+    padding: 1.5rem 5rem;
+}
+
+.price-per-night span {
+    font-size: 5rem;
+}
+
+.price-description {
+    display: flex;
+    font-size: 1.8rem;
+    font-weight: 400;
+    justify-content: center;
+    margin-bottom: 2rem;
+}
+
+.price-info {
+    display: flex;
+    font-size: 1.8rem;
+    font-weight: 300;
+    justify-content: center;
 }

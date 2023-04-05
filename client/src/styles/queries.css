@@ -20,6 +20,19 @@
     .rooms-grid {
         grid-template-columns: repeat(4, 1fr) !important;
     }
+
+    .page-hero {
+        flex-direction: column;
+    }
+
+    .hero--video {
+        margin-top: 20rem;
+        max-width: 90rem;
+    }
+
+    #video-presentation {
+        width: 100%;
+    }
 }
 
 /* Below 1030px */
@@ -99,6 +112,17 @@
 
     .reserve--price {
         margin: 2.2rem auto;
+    }
+}
+
+@media (max-width: 555px) {
+    .section-page--center {
+        padding: 0 2rem !important;
+    }
+
+    .hero--header textarea{
+        min-width: 100% !important;
+        width: 100% !important;
     }
 }
 

@@ -1,9 +1,14 @@
 import React from "react";
 
-function ScrollBar() {
+function ScrollBar(props) {
 
     return (
-        <h2>ScrollBar</h2>
+        <section className="section--header-scrollbar">
+            <div className="buttons-scrollbar">
+                <div className="button-back" onClick={props.back}><a href="#">Back</a></div>
+                <div className="button-next" onClick={props.next}>Next</div>
+            </div>
+        </section>
     )
 }
 
