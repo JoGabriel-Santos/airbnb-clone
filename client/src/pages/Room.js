@@ -12,7 +12,6 @@ function Room() {
 
     useEffect(() => {
         const cards = document.querySelectorAll(".image-small");
-        console.log(cards)
 
         cards.forEach((card, index) => {
             setTimeout(() => {
