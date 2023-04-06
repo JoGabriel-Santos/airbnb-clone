@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React, { useEffect, useRef } from "react";
 
 import data from "../helpers/dataFilters";
 
@@ -22,6 +22,21 @@ function Filters() {
             });
         }
     };
+
+    useEffect(() => {
+        const filters = document.querySelectorAll(".filter");
+
+        filters.forEach((filter, index) => {
+            setTimeout(() => {
+                filter.classList.add("fade-animation");
+
+                setTimeout(() => {
+                    filter.classList.remove("fade-animation");
+                    filter.classList.add("opacity-06");
+                }, 500);
+            }, index * 100);
+        });
+    }, []);
 
     return (
         <div className="section-filters-container">

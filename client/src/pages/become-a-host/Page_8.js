@@ -24,7 +24,7 @@ function Page_8() {
                     </div>
 
                     <h6 className="price-description">per night</h6>
-                    <h4 className="price-info">Places like yours in your area usually range from R$112 to R$190</h4>
+                    <h4 className="price-info--become-a-host">Places like yours in your area usually range from R$112 to R$190</h4>
                 </div>
             </div>
         </section>

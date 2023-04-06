@@ -120,9 +120,18 @@
         padding: 0 2rem !important;
     }
 
-    .hero--header textarea{
+    .hero--header textarea {
         min-width: 100% !important;
         width: 100% !important;
+    }
+
+    .price-per-night {
+        margin: 0 auto;
+        padding: 1.5rem 3rem !important;
+    }
+
+    .price-per-night span {
+        font-size: 3rem !important;
     }
 }
 
