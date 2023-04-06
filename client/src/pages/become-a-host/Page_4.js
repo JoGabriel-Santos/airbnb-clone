@@ -1,6 +1,15 @@
-import React from "react";
+import React, { useEffect } from "react";
 
 function Page_4() {
+    useEffect(() => {
+        const cards = document.querySelectorAll(".image-small");
+
+        cards.forEach((card, index) => {
+            setTimeout(() => {
+                card.classList.add("up-animation");
+            }, index * 100);
+        });
+    }, []);
 
     return (
         <section className="section-page container-pages">
@@ -9,7 +18,7 @@ function Page_4() {
 
                 <div className="room--images-m0">
                     <div className="images-grid-2">
-                        <img className="image-big" src={require("../../util/images/room-example.webp")} alt=""/>
+                        <img className="image-big up-animation" src={require("../../util/images/room-example.webp")} alt=""/>
 
                         <div className="images-grid-4">
                             <img className="image-small" src={require("../../util/images/room-example-2.webp")} alt=""/>

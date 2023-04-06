@@ -1,8 +1,17 @@
-import React from "react";
+import React, { useEffect } from "react";
 
 import propertyType from "../../helpers/dataFilters";
 
 function Page_2() {
+    useEffect(() => {
+        const filters = document.querySelectorAll(".property-type--card");
+
+        filters.forEach((filter, index) => {
+            setTimeout(() => {
+                filter.classList.add("fade-animation--property");
+            }, index * 100);
+        });
+    }, []);
 
     return (
         <section className="section-page container-pages">

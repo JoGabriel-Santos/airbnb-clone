@@ -11,7 +11,7 @@
 }
 
 .header--room {
-    padding: 0 4rem;
+    padding: 0;
 }
 
 .logo {
@@ -629,6 +629,7 @@ input:checked + .slider.round:after {
 .image-small {
     height: 28rem;
     object-fit: cover;
+    opacity: 0;
     width: 100%;
 }
 
@@ -1042,6 +1043,7 @@ input[type="date"] {
     border: rgba(51, 51, 51, 0.4) 1px solid;
     border-radius: 12px;
     cursor: pointer;
+    opacity: 0;
     padding: 1.6rem;
     transition: .3s ease;
 }

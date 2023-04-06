@@ -35,6 +35,14 @@
     }
 }
 
+/* Below 1075px */
+
+@media (max-width: 1075px) {
+    .header--room {
+        padding: 0 4rem !important;
+    }
+}
+
 /* Below 1030px */
 
 @media (max-width: 1030px) {
@@ -101,7 +109,7 @@
     }
 
     .images-grid-4 {
-        display: none !important;
+        grid-template-columns: repeat(4, 1fr) !important;
     }
 }
 
@@ -132,6 +140,10 @@
 
     .price-per-night span {
         font-size: 3rem !important;
+    }
+
+    .images-grid-4 {
+        display: none !important;
     }
 }
 

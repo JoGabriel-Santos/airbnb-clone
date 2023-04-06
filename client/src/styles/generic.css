@@ -66,3 +66,16 @@ strong {
         opacity: 0.6;
     }
 }
+
+.fade-animation--property {
+    animation: fadeInProperty .5s ease-in-out forwards;
+}
+
+@keyframes fadeInProperty {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}

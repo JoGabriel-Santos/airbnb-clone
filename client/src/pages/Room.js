@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 
 import Guests from "../components/Guests";
 import Navbar from "../components/Navbar";
@@ -9,6 +9,17 @@ function Room() {
     function handleMenuClick() {
         setShowMenu(!showMenu);
     }
+
+    useEffect(() => {
+        const cards = document.querySelectorAll(".image-small");
+        console.log(cards)
+
+        cards.forEach((card, index) => {
+            setTimeout(() => {
+                card.classList.add("up-animation");
+            }, index * 100);
+        });
+    }, []);
 
     return (
         <React.Fragment>
@@ -46,7 +57,7 @@ function Room() {
 
                     <div className="room--images">
                         <div className="images-grid-2">
-                            <img className="image-big" src={require("../util/images/room-example.webp")} alt=""/>
+                            <img className="image-big up-animation" src={require("../util/images/room-example.webp")} alt=""/>
 
                             <div className="images-grid-4">
                                 <img className="image-small" src={require("../util/images/room-example-2.webp")} alt=""/>
@@ -57,7 +68,7 @@ function Room() {
                         </div>
                     </div>
 
-                    <div className="room-reserve">
+                    <div className="room-reserve up-animation">
                         <div className="reserve">
                             <div className="reserve--host">
                                 <div className="host-info">

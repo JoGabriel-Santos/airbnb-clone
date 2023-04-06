@@ -5,7 +5,7 @@ function Page_3() {
     return (
         <section className="section-page container-pages">
             <div className="page-hero">
-                <div className="hero--info">
+                <div className="hero--info up-animation">
                     <h6 className="info-steps">Step 2</h6>
                     <h1 className="info-about">Make your place stand out</h1>
 
