@@ -1,6 +1,7 @@
 import React from "react";
-
 import { AnimatePresence, motion } from "framer-motion";
+
+import OAuth from "./OAuth";
 
 function Login(props) {
 
@@ -30,17 +31,14 @@ function Login(props) {
                         <h1 className="user-title">Welcome to Airbnb</h1>
 
                         <div className="content--social-networks">
+                            <OAuth/>
+
+                            <hr/>
+
                             <div className="social-network">
                                 <p className="social-network--link">
                                     <img src={require("../util/images/facebook.png")} alt=""/>
                                     Continue with Facebook
-                                </p>
-                            </div>
-
-                            <div className="social-network">
-                                <p className="social-network--link">
-                                    <img src={require("../util/images/google.png")} alt=""/>
-                                    Continue with Google
                                 </p>
                             </div>
 

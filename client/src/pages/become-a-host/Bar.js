@@ -6,7 +6,7 @@ function Bar(props) {
         <div>
             <div className="progress-bar">
                 <div className="progress-bar--fill"
-                     style={{width: `${(props.progress - 1) * 10}%`,}}>
+                     style={{width: `${(props.progress - 1) * 100 / 7}%`,}}>
                 </div>
             </div>
         </div>

@@ -22,7 +22,7 @@ function Host() {
     };
 
     const handleNext = () => {
-        if (progress < 10)
+        if (progress < 8)
             setProgress(progress + 1);
     };
 
