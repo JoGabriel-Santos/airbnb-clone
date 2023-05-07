@@ -621,16 +621,26 @@ input:checked + .slider.round:after {
 }
 
 .image-big {
+    border: #333333 1px solid;
+    border-radius: 12px;
+    cursor: pointer;
     height: 57rem;
     object-fit: cover;
     width: 100%;
 }
 
 .image-small {
+    border: #333333 1px solid;
+    border-radius: 12px;
+    cursor: pointer;
     height: 28rem;
     object-fit: cover;
     opacity: 0;
     width: 100%;
+}
+
+.input-image {
+    display: none;
 }
 
 .room-reserve {
@@ -1050,6 +1060,12 @@ input[type="date"] {
 
 .property-type--card:hover {
     border: rgba(51, 51, 51, 1) 1px solid;
+}
+
+.property-type--selected {
+    border: rgba(51, 51, 51, 1) 1px solid;
+    box-shadow: 2px 2px 4px rgb(51, 51, 51);
+    opacity: 1;
 }
 
 .property-type--card img {

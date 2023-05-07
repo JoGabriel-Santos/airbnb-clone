@@ -17,7 +17,7 @@ function Page_3() {
 
                 <div className="hero--video">
                     <video id="video-presentation" autoPlay muted>
-                        <source src={require("../../util/videos/about-your-place_2.mp4")} type="video/mp4"/>
+                        <source src={require("../../util/videos/about-your-place_1.mp4")} type="video/mp4"/>
                     </video>
                 </div>
             </div>

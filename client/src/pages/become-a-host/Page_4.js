@@ -1,6 +1,22 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 
-function Page_4() {
+function Page_4(props) {
+    const [images, setImages] = useState([]);
+
+    const convertToBase64 = (event) => {
+        const file = event.target.files[0];
+        const reader = new FileReader();
+
+        reader.readAsDataURL(file);
+
+        reader.onloadend = () => {
+            if (images.length <= 4)
+                setImages(prevImages => [...prevImages, reader.result.toString()]);
+        };
+
+        props.savingData(images, "Images");
+    }
+
     useEffect(() => {
         const cards = document.querySelectorAll(".image-small");
 
@@ -18,15 +34,30 @@ function Page_4() {
 
                 <div className="room--images-m0">
                     <div className="images-grid-2">
-                        <img className="image-big up-animation" src={require("../../util/images/room-example.webp")} alt=""/>
+                        <img className="image-big up-animation"
+                             src={images[0] === undefined ? require("../../util/images/image-upload.png") : images[0]} alt=""
+                             onClick={() => document.getElementById("file-input").click()}/>
 
                         <div className="images-grid-4">
-                            <img className="image-small" src={require("../../util/images/room-example-2.webp")} alt=""/>
-                            <img className="image-small" src={require("../../util/images/room-example-3.webp")} alt=""/>
-                            <img className="image-small" src={require("../../util/images/room-example-4.webp")} alt=""/>
-                            <img className="image-small" src={require("../../util/images/room-example-5.webp")} alt=""/>
+                            <img className="image-small"
+                                 src={images[1] === undefined ? require("../../util/images/image-upload.png") : images[1]} alt=""
+                                 onClick={() => document.getElementById("file-input").click()}/>
+
+                            <img className="image-small"
+                                 src={images[2] === undefined ? require("../../util/images/image-upload.png") : images[2]} alt=""
+                                 onClick={() => document.getElementById("file-input").click()}/>
+
+                            <img className="image-small"
+                                 src={images[3] === undefined ? require("../../util/images/image-upload.png") : images[3]} alt=""
+                                 onClick={() => document.getElementById("file-input").click()}/>
+
+                            <img className="image-small"
+                                 src={images[4] === undefined ? require("../../util/images/image-upload.png") : images[4]} alt=""
+                                 onClick={() => document.getElementById("file-input").click()}/>
                         </div>
                     </div>
+
+                    <input className="input-image" type="file" id="file-input" onChange={event => convertToBase64(event)}/>
                 </div>
             </div>
         </section>

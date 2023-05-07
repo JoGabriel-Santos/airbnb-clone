@@ -16,6 +16,25 @@ import Page_8 from "./Page_8";
 function Host() {
     const [progress, setProgress] = useState(1);
 
+    const [propertyTypes, setPropertyTypes] = useState([]);
+    const [images, setImages] = useState([]);
+    const [title, setTitle] = useState("");
+
+    const handleSavingData = (data, type) => {
+        switch (type) {
+            case "Property type":
+                if (!propertyTypes.includes(data))
+                    setPropertyTypes(prevPropertyTypes => [...prevPropertyTypes, data]);
+
+                break;
+
+            case "Images":
+                setImages(data);
+        }
+    }
+
+    console.log(images);
+
     const handleBack = () => {
         if (progress > 1)
             setProgress(progress - 1);
@@ -28,9 +47,9 @@ function Host() {
 
     const pages = {
         1: <Page_1/>,
-        2: <Page_2/>,
+        2: <Page_2 savingData={handleSavingData} propertyTypes={propertyTypes}/>,
         3: <Page_3/>,
-        4: <Page_4/>,
+        4: <Page_4 savingData={handleSavingData}/>,
         5: <Page_5/>,
         6: <Page_6/>,
         7: <Page_7/>,

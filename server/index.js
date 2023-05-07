@@ -8,7 +8,7 @@ app.use(express.json({limit: "30mb", extended: true}));
 app.use(express.urlencoded({limit: "30mb", extended: true}));
 app.use(cors());
 
-const CONNECTION_URL = "mongodb+srv://jogabriel-santos:Yltlm5IIa2pqr4wp@airbnb.gismvr1.mongodb.net/?retryWrites=true&w=majority";
+const CONNECTION_URL = "";
 const PORT = process.env.PORT || 5000;
 
 mongoose.connect(CONNECTION_URL, {useFindAndModify: false, useNewUrlParser: true, useUnifiedTopology: true})

@@ -10,7 +10,7 @@ function OAuth() {
         const token = response;
 
         try {
-            dispatch({ type: "AUTH", data: { result, token } });
+            dispatch({type: "AUTH", data: {result, token}});
 
         } catch (error) {
 

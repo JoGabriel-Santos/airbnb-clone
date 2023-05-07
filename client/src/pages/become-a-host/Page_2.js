@@ -2,7 +2,8 @@ import React, { useEffect } from "react";
 
 import propertyType from "../../helpers/dataFilters";
 
-function Page_2() {
+function Page_2(props) {
+
     useEffect(() => {
         const filters = document.querySelectorAll(".property-type--card");
 
@@ -21,7 +22,9 @@ function Page_2() {
                 <div className="property-type">
                     {
                         propertyType.map((type, key) => (
-                            <div className="property-type--card" key={key}>
+                            <div className={`property-type--card ${props.propertyTypes.includes(type.description) && "property-type--selected"}`} key={key}
+                                 onClick={() => props.savingData(type.description, "Property type")}>
+
                                 <img src={type.imageSrc} alt=""/>
                                 <h4 className="type-description">{type.description}</h4>
                             </div>
