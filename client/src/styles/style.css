@@ -621,7 +621,6 @@ input:checked + .slider.round:after {
 }
 
 .image-big {
-    border: #333333 1px solid;
     border-radius: 12px;
     cursor: pointer;
     height: 57rem;
@@ -630,13 +629,16 @@ input:checked + .slider.round:after {
 }
 
 .image-small {
-    border: #333333 1px solid;
     border-radius: 12px;
     cursor: pointer;
     height: 28rem;
     object-fit: cover;
     opacity: 0;
     width: 100%;
+}
+
+.image-border {
+    border: #333333 1px solid;
 }
 
 .input-image {

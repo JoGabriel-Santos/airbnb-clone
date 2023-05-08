@@ -21,6 +21,7 @@ function Host() {
     const [title, setTitle] = useState("");
 
     const handleSavingData = (data, type) => {
+
         switch (type) {
             case "Property type":
                 if (!propertyTypes.includes(data))
@@ -32,8 +33,6 @@ function Host() {
                 setImages(data);
         }
     }
-
-    console.log(images);
 
     const handleBack = () => {
         if (progress > 1)

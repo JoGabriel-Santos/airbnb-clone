@@ -34,24 +34,24 @@ function Page_4(props) {
 
                 <div className="room--images-m0">
                     <div className="images-grid-2">
-                        <img className="image-big up-animation"
+                        <img className="image-big image-border up-animation"
                              src={images[0] === undefined ? require("../../util/images/image-upload.png") : images[0]} alt=""
                              onClick={() => document.getElementById("file-input").click()}/>
 
                         <div className="images-grid-4">
-                            <img className="image-small"
+                            <img className="image-small image-border"
                                  src={images[1] === undefined ? require("../../util/images/image-upload.png") : images[1]} alt=""
                                  onClick={() => document.getElementById("file-input").click()}/>
 
-                            <img className="image-small"
+                            <img className="image-small image-border"
                                  src={images[2] === undefined ? require("../../util/images/image-upload.png") : images[2]} alt=""
                                  onClick={() => document.getElementById("file-input").click()}/>
 
-                            <img className="image-small"
+                            <img className="image-small image-border"
                                  src={images[3] === undefined ? require("../../util/images/image-upload.png") : images[3]} alt=""
                                  onClick={() => document.getElementById("file-input").click()}/>
 
-                            <img className="image-small"
+                            <img className="image-small image-border"
                                  src={images[4] === undefined ? require("../../util/images/image-upload.png") : images[4]} alt=""
                                  onClick={() => document.getElementById("file-input").click()}/>
                         </div>
