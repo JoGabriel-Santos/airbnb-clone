@@ -1,6 +1,8 @@
-import React from "react";
+import React, { useState } from "react";
 
 function Page_8() {
+
+    const [price, setPrice] = useState(0);
 
     return (
         <section className="section-page--center container-pages up-animation">
@@ -15,7 +17,8 @@ function Page_8() {
                         </div>
 
                         <div className="price-per-night">
-                            <span>R$ 3080</span>
+                            <span>$</span>
+                            <input type="number"/>
                         </div>
 
                         <div className="hero--price-more">
@@ -24,7 +27,7 @@ function Page_8() {
                     </div>
 
                     <h6 className="price-description">per night</h6>
-                    <h4 className="price-info--become-a-host">Places like yours in your area usually range from R$112 to R$190</h4>
+                    <h4 className="price-info--become-a-host">Places like yours in your area usually range from $112 to $190</h4>
                 </div>
             </div>
         </section>

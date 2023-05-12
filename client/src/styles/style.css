@@ -1149,6 +1149,15 @@ input[type="date"] {
     padding: 1.5rem 5rem;
 }
 
+.price-per-night input {
+    border: none;
+    color: inherit;
+    font-size: 5rem;
+    margin-left: 20px;
+    max-width: 20rem;
+    outline: none;
+}
+
 .price-per-night span {
     font-size: 5rem;
 }

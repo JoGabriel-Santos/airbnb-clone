@@ -138,6 +138,10 @@
         padding: 1.5rem 3rem !important;
     }
 
+    .price-per-night input {
+        font-size: 3rem !important;
+    }
+
     .price-per-night span {
         font-size: 3rem !important;
     }
