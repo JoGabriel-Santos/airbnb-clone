@@ -1,8 +1,13 @@
-import React, { useState } from "react";
+import React, {useEffect, useState} from "react";
 
-function Page_5() {
+function Page_5(props) {
 
-    const [title, setTitle] = useState("");
+    const [title, setTitle] = useState(props.title);
+
+    useEffect(() => {
+        props.savingData(title, "Title");
+
+    }, [title]);
 
     return (
         <section className="section-page--center container-pages up-animation">

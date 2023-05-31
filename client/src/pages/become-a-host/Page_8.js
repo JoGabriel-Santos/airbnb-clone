@@ -1,8 +1,13 @@
-import React, { useState } from "react";
+import React, {useEffect, useState} from "react";
 
-function Page_8() {
+function Page_8(props) {
 
-    const [price, setPrice] = useState(0);
+    const [price, setPrice] = useState(props.price);
+
+    useEffect(() => {
+        props.savingData(price, "Price");
+
+    }, [price]);
 
     return (
         <section className="section-page--center container-pages up-animation">
@@ -12,16 +17,22 @@ function Page_8() {
 
                 <div className="hero--price">
                     <div className="hero--price-buttons">
-                        <div className="hero--price-less">
+                        <div className="hero--price-less"
+                             onClick={() => setPrice(prevPrice => (prevPrice > 0 ? prevPrice - 1 : 0))}>
                             <img src={require("../../util/images/less.png")} alt=""/>
                         </div>
 
                         <div className="price-per-night">
                             <span>$</span>
-                            <input type="number"/>
+                            <input
+                                type="number"
+                                value={price}
+                                onChange={(event) => setPrice(parseInt(event.target.value) >= 0 ? parseInt(event.target.value) : 0)}
+                            />
                         </div>
 
-                        <div className="hero--price-more">
+                        <div className="hero--price-more"
+                             onClick={() => setPrice(prevPrice => prevPrice + 1)}>
                             <img src={require("../../util/images/more.png")} alt=""/>
                         </div>
                     </div>

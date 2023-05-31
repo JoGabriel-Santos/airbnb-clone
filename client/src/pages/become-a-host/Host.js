@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, {useState} from "react";
 
 import Header from "./Header";
 import ScrollBar from "./ScrollBar";
@@ -19,6 +19,8 @@ function Host() {
     const [propertyTypes, setPropertyTypes] = useState([]);
     const [images, setImages] = useState([]);
     const [title, setTitle] = useState("");
+    const [description, setDescription] = useState("");
+    const [price, setPrice] = useState(0);
 
     const handleSavingData = (data, type) => {
 
@@ -26,11 +28,23 @@ function Host() {
             case "Property type":
                 if (!propertyTypes.includes(data))
                     setPropertyTypes(prevPropertyTypes => [...prevPropertyTypes, data]);
-
                 break;
 
             case "Images":
-                setImages(data);
+                setImages(prevImages => [...prevImages, data]);
+                break;
+
+            case "Title":
+                setTitle(data);
+                break;
+
+            case "Description":
+                setDescription(data);
+                break;
+
+            case "Price":
+                setPrice(data);
+                break;
         }
     }
 
@@ -42,17 +56,32 @@ function Host() {
     const handleNext = () => {
         if (progress < 8)
             setProgress(progress + 1);
+
+        else {
+            const data = {
+                propertyTypes: propertyTypes,
+                images: images,
+                title: title,
+                description: description,
+                price: price
+            };
+
+            const jsonData = JSON.stringify(data);
+
+
+
+        }
     };
 
     const pages = {
         1: <Page_1/>,
         2: <Page_2 savingData={handleSavingData} propertyTypes={propertyTypes}/>,
         3: <Page_3/>,
-        4: <Page_4 savingData={handleSavingData}/>,
-        5: <Page_5/>,
-        6: <Page_6/>,
+        4: <Page_4 savingData={handleSavingData} images={images}/>,
+        5: <Page_5 savingData={handleSavingData} title={title}/>,
+        6: <Page_6 savingData={handleSavingData} description={description}/>,
         7: <Page_7/>,
-        8: <Page_8/>
+        8: <Page_8 savingData={handleSavingData} price={price}/>
     };
 
     return (

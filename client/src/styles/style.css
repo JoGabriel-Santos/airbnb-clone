@@ -1117,6 +1117,7 @@ input[type="date"] {
     display: flex;
     justify-content: space-between;
     margin-bottom: 2rem;
+    user-select: none;
 }
 
 .hero--price-less,
