@@ -1,16 +1,13 @@
 import React, { useEffect } from "react";
-import { useDispatch } from "react-redux";
 import jwtDecode from "jwt-decode";
 
 function OAuth() {
-    const dispatch = useDispatch();
 
     function handleCallbackResponse(response) {
         const result = jwtDecode(response.credential);
-        const token = response;
 
         try {
-            dispatch({type: "AUTH", data: {result, token}});
+            localStorage.setItem("user_info", JSON.stringify(result));
 
         } catch (error) {
 
