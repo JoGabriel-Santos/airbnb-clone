@@ -1,6 +1,11 @@
 import mongoose from "mongoose";
 
-const productSchema = new mongoose.Schema({
+const roomSchema = new mongoose.Schema({
+    host: [{
+        type: mongoose.Schema.Types.ObjectId,
+        required: true,
+        ref: "User",
+    }],
     propertyTypes: {
         type: [String],
         default: [],
@@ -25,6 +30,6 @@ const productSchema = new mongoose.Schema({
     },
 });
 
-const Product = mongoose.model("Product", productSchema);
+const Room = mongoose.model("Room", roomSchema);
 
-export default Product;
+export default Room;

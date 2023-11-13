@@ -1,9 +1,7 @@
-import React, {useState} from "react";
-
+import React, { useState } from "react";
 import Header from "./Header";
 import ScrollBar from "./ScrollBar";
 import Bar from "./Bar";
-
 import Page_1 from "./Page_1";
 import Page_2 from "./Page_2";
 import Page_3 from "./Page_3";
@@ -12,6 +10,7 @@ import Page_5 from "./Page_5";
 import Page_6 from "./Page_6";
 import Page_7 from "./Page_7";
 import Page_8 from "./Page_8";
+import API from "../../../src/api/index";
 
 function Host() {
     const [progress, setProgress] = useState(1);
@@ -53,7 +52,7 @@ function Host() {
             setProgress(progress - 1);
     };
 
-    const handleNext = () => {
+    const handleNext = async () => {
         if (progress < 8)
             setProgress(progress + 1);
 
@@ -66,10 +65,13 @@ function Host() {
                 price: price
             };
 
-            const jsonData = JSON.stringify(data);
+            try {
+                await API.publishProduct(JSON.stringify(data));
+                window.location.href = `/`;
 
-
-
+            } catch (error) {
+                console.log(error.response);
+            }
         }
     };
 
