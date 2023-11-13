@@ -1,29 +1,45 @@
 import React, { useEffect, useState } from "react";
-
 import Navbar from "../components/Navbar";
 import Rooms from "../components/Rooms";
 import CheckboxSwitch from "../components/Switch";
+import * as API from "../api/index";
 
 function Home() {
+    const [isLoading, setIsLoading] = useState(true);
+    const [rooms, setRooms] = useState([]);
 
-    const [rooms, setRooms] = useState([
-        require("../util/images/room-example.webp"),
-        require("../util/images/room-example-2.webp"),
-        require("../util/images/room-example-3.webp"),
-        require("../util/images/room-example-4.webp"),
-        require("../util/images/room-example-5.webp"),
-        require("../util/images/room-example-6.webp"),
-    ]);
+    const fetchRooms = async () => {
+        try {
+            const roomsData = await API.getRooms();
+            setRooms(roomsData.data);
+
+        } catch (error) {
+            console.error("Error fetching products:", error.message);
+
+        } finally {
+            setIsLoading(false);
+        }
+    };
 
     useEffect(() => {
-        const cards = document.querySelectorAll(".card-room");
-
-        cards.forEach((card, index) => {
-            setTimeout(() => {
-                card.classList.add("up-animation");
-            }, index * 100);
-        });
+        fetchRooms();
     }, []);
+
+    useEffect(() => {
+        if (!isLoading) {
+            const cards = document.querySelectorAll(".card-room");
+
+            cards.forEach((card, index) => {
+                setTimeout(() => {
+                    card.classList.add("up-animation");
+                }, index * 100);
+            });
+        }
+    }, [isLoading]);
+
+    if (isLoading) {
+        return;
+    }
 
     return (
         <React.Fragment>
@@ -48,14 +64,14 @@ function Home() {
             <section className="section-rooms">
                 <div className="rooms-grid">
                     {
-                        rooms.map((image, index) => (
-                            <Rooms key={index} image={image}/>
+                        rooms.map((roomInfo, index) => (
+                            <Rooms key={index} roomInfo={roomInfo}/>
                         ))
                     }
                 </div>
             </section>
         </React.Fragment>
-    )
+    );
 }
 
 export default Home;
