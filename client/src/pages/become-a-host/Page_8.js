@@ -1,44 +1,24 @@
-import React, {useEffect, useState} from "react";
+import React from "react";
 
-function Page_8(props) {
-
-    const [price, setPrice] = useState(props.price);
-
-    useEffect(() => {
-        props.savingData(price, "Price");
-
-    }, [price]);
+function Page_8() {
 
     return (
-        <section className="section-page--center container-pages up-animation">
-            <div className="page-hero-p5">
-                <h2 className="hero--title-p5">Now, set your price</h2>
-                <h6 className="hero--subtitle">You can change it anytime.</h6>
+        <section className="section-page container-pages">
+            <div className="page-hero">
+                <div className="hero--info up-animation">
+                    <h6 className="info-steps">Step 3</h6>
+                    <h1 className="info-about">Finish up and publish</h1>
 
-                <div className="hero--price">
-                    <div className="hero--price-buttons">
-                        <div className="hero--price-less"
-                             onClick={() => setPrice(prevPrice => (prevPrice > 0 ? prevPrice - 1 : 0))}>
-                            <img src={require("../../util/images/less.png")} alt=""/>
-                        </div>
+                    <p className="info-description">
+                        Finally, you’ll choose if you'd like to start with an experienced guest,
+                        then you'll set your nightly price. Answer a few quick questions and publish when you're ready.
+                    </p>
+                </div>
 
-                        <div className="price-per-night">
-                            <span>$</span>
-                            <input
-                                type="number"
-                                value={price}
-                                onChange={(event) => setPrice(parseInt(event.target.value) >= 0 ? parseInt(event.target.value) : 0)}
-                            />
-                        </div>
-
-                        <div className="hero--price-more"
-                             onClick={() => setPrice(prevPrice => prevPrice + 1)}>
-                            <img src={require("../../util/images/more.png")} alt=""/>
-                        </div>
-                    </div>
-
-                    <h6 className="price-description">per night</h6>
-                    <h4 className="price-info--become-a-host">Places like yours in your area usually range from $112 to $190</h4>
+                <div className="hero--video">
+                    <video id="video-presentation" autoPlay muted>
+                        <source src={require("../../util/videos/about-your-place_3.mp4")} type="video/mp4"/>
+                    </video>
                 </div>
             </div>
         </section>

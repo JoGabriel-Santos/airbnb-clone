@@ -1,24 +1,27 @@
-import React from "react";
+import React, {useEffect, useState} from "react";
 
-function Page_7() {
+function Page_7(props) {
+
+    const [location, setLocation] = useState(props.location);
+
+    useEffect(() => {
+        props.savingData(location, "Location");
+
+    }, [location]);
 
     return (
-        <section className="section-page container-pages">
-            <div className="page-hero">
-                <div className="hero--info up-animation">
-                    <h6 className="info-steps">Step 3</h6>
-                    <h1 className="info-about">Finish up and publish</h1>
+        <section className="section-page--center container-pages up-animation">
+            <div className="page-hero-p5">
+                <h2 className="hero--title-p5">Set your location</h2>
+                <h6 className="hero--subtitle">Please provide the exact location of your house for rent.</h6>
 
-                    <p className="info-description">
-                        Finally, you’ll choose if you'd like to start with an experienced guest,
-                        then you'll set your nightly price. Answer a few quick questions and publish when you're ready.
-                    </p>
-                </div>
-
-                <div className="hero--video">
-                    <video id="video-presentation" autoPlay muted>
-                        <source src={require("../../util/videos/about-your-place_3.mp4")} type="video/mp4"/>
-                    </video>
+                <div className="hero--header">
+                    <textarea
+                        cols="30"
+                        rows="10"
+                        value={location}
+                        onChange={(event) => setLocation(event.target.value)}
+                    ></textarea>
                 </div>
             </div>
         </section>

@@ -1,11 +1,14 @@
 import mongoose from "mongoose";
 
 const roomSchema = new mongoose.Schema({
-    host: [{
-        type: mongoose.Schema.Types.ObjectId,
+    hostName:{
+        type: String,
         required: true,
-        ref: "User",
-    }],
+    },
+    hostPicture:{
+        type: String,
+        required: true,
+    },
     propertyTypes: {
         type: [String],
         default: [],
@@ -21,6 +24,10 @@ const roomSchema = new mongoose.Schema({
         required: true,
     },
     description: {
+        type: String,
+        required: true,
+    },
+    location: {
         type: String,
         required: true,
     },
