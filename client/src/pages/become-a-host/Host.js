@@ -10,7 +10,7 @@ import Page_5 from "./Page_5";
 import Page_6 from "./Page_6";
 import Page_7 from "./Page_7";
 import Page_8 from "./Page_8";
-import API from "../../../src/api/index";
+import * as API from "../../../src/api/index";
 
 function Host() {
     const [progress, setProgress] = useState(1);
@@ -57,7 +57,11 @@ function Host() {
             setProgress(progress + 1);
 
         else {
+            const userInfo = JSON.parse(localStorage.getItem("user_info"));
+
             const data = {
+                hostName: userInfo.name,
+                hostPicture: userInfo.picture,
                 propertyTypes: propertyTypes,
                 images: images,
                 title: title,
@@ -66,7 +70,7 @@ function Host() {
             };
 
             try {
-                await API.publishProduct(JSON.stringify(data));
+                await API.publishRoom(JSON.stringify(data));
                 window.location.href = `/`;
 
             } catch (error) {

@@ -18,5 +18,5 @@ export const signin = (userInfo) => API.post("/user/signin", userInfo);
 export const signup = (userInfo) => API.post("/user/signup", userInfo);
 
 export const getRooms = () => API.get(`/room/getRooms`);
-export const getRoomById = (id_product) => API.get(`/room/getRoomById/${id_room}`);
+export const getRoomById = (id_room) => API.get(`/room/getRoomById/${id_room}`);
 export const publishRoom = (roomInfo) => API.post("/room/publishRoom", roomInfo);
