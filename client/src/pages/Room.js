@@ -148,7 +148,7 @@ function Room() {
                                             <div className="header-user--options width-lg">
                                                 <ul className="options-list options-list--guest">
                                                     <Guests categoryName={"Adults"} categoryAges={"Age 13+"}/>
-                                                    <Guests categoryName={"Children"} categoryAges={"Age2 2-12"}/>
+                                                    <Guests categoryName={"Children"} categoryAges={"Age 2-12"}/>
                                                     <Guests categoryName={"Infants"} categoryAges={"Under 2"}/>
                                                 </ul>
                                             </div>

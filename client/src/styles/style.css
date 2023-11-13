@@ -842,12 +842,12 @@ input[type="date"] {
 
 .category-name {
     font-size: 1.8rem;
-    font-weight: 500;
+    font-weight: 400;
 }
 
-.category-age {
-    font-size: 1.3rem;
-    font-weight: 400;
+.category-ages {
+    font-size: 1.4rem;
+    font-weight: 500;
 }
 
 .guest-quantity {
@@ -877,6 +877,7 @@ input[type="date"] {
 }
 
 .quantity {
+    font-weight: 400;
     margin: 0 1rem;
 }
 
@@ -1065,8 +1066,8 @@ input[type="date"] {
 }
 
 .property-type--selected {
-    border: rgba(51, 51, 51, 1) 1px solid;
-    box-shadow: 2px 2px 4px rgb(51, 51, 51);
+    border: rgba(51, 51, 51, 0.66) 1px solid;
+    box-shadow: 2px 2px 4px rgba(51, 51, 51, 0.66);
     opacity: 1;
 }
 
@@ -1151,16 +1152,19 @@ input[type="date"] {
 }
 
 .price-per-night input {
+    align-items: center;
     border: none;
     color: inherit;
-    font-size: 5rem;
+    display: flex;
+    font-size: 4.5rem;
     margin-left: 20px;
+    margin-top: 5px;
     max-width: 20rem;
     outline: none;
 }
 
 .price-per-night span {
-    font-size: 5rem;
+    font-size: 4.5rem;
 }
 
 .price-description {
