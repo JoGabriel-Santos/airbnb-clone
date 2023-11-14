@@ -1,14 +1,36 @@
 import React, { useEffect, useState } from "react";
-
+import { useParams } from "react-router-dom";
 import Guests from "../components/Guests";
 import Navbar from "../components/Navbar";
+import * as API from "../api/index";
 
 function Room() {
+    const { roomId } = useParams();
+
+    const [isLoading, setIsLoading] = useState(true);
+    const [roomData, setRoomData] = useState();
     const [showMenu, setShowMenu] = useState(false);
 
     function handleMenuClick() {
         setShowMenu(!showMenu);
     }
+
+    const fetchRoom = async () => {
+        try {
+            const roomData = await API.getRoomById(roomId);
+            setRoomData(roomData.data);
+
+        } catch (error) {
+            console.error("Error fetching room:", error.message);
+
+        } finally {
+            setIsLoading(false);
+        }
+    };
+
+    useEffect(() => {
+        fetchRoom();
+    }, []);
 
     useEffect(() => {
         const cards = document.querySelectorAll(".image-small");
@@ -18,7 +40,11 @@ function Room() {
                 card.classList.add("up-animation");
             }, index * 100);
         });
-    }, []);
+    }, [isLoading]);
+
+    if (isLoading) {
+        return;
+    }
 
     return (
         <React.Fragment>
@@ -26,7 +52,7 @@ function Room() {
 
             <section className="section-room">
                 <div className="container">
-                    <h1 className="room-title">The Valley Lodge: Stunning view and cosiness!</h1>
+                    <h1 className="room-title">{roomData.title}</h1>
 
                     <div className="room--info-share-save">
                         <div className="room-info">
@@ -38,7 +64,7 @@ function Room() {
                             <img src={require("../util/images/dot.png")} alt=""/>
                             <h2 className="room-info--reviews">40 reviews</h2>
                             <img src={require("../util/images/dot.png")} alt=""/>
-                            <h2 className="room-info--location">Alfredo Chaves, State of Espírito Santo, Brazil</h2>
+                            <h2 className="room-info--location">{roomData.location}</h2>
                         </div>
 
                         <div className="share-save">
@@ -56,13 +82,13 @@ function Room() {
 
                     <div className="room--images">
                         <div className="images-grid-2">
-                            <img className="image-big up-animation" src={require("../util/images/room-example.webp")} alt=""/>
+                            <img className="image-big up-animation" src={roomData.images[0]} alt=""/>
 
                             <div className="images-grid-4">
-                                <img className="image-small" src={require("../util/images/room-example-2.webp")} alt=""/>
-                                <img className="image-small" src={require("../util/images/room-example-3.webp")} alt=""/>
-                                <img className="image-small" src={require("../util/images/room-example-4.webp")} alt=""/>
-                                <img className="image-small" src={require("../util/images/room-example-5.webp")} alt=""/>
+                                <img className="image-small" src={roomData.images[1]} alt=""/>
+                                <img className="image-small" src={roomData.images[2]} alt=""/>
+                                <img className="image-small" src={roomData.images[3]} alt=""/>
+                                <img className="image-small" src={roomData.images[4]} alt=""/>
                             </div>
                         </div>
                     </div>
@@ -71,10 +97,10 @@ function Room() {
                         <div className="reserve">
                             <div className="reserve--host">
                                 <div className="host-info">
-                                    <h2 className="host-title">Entire chalet hosted by Alfredo Chaves</h2>
+                                    <h2 className="host-title">Entire chalet hosted by {roomData.hostName}</h2>
                                 </div>
 
-                                <img className="host-image" src={require("../util/images/host-example.jpg")} alt=""/>
+                                <img className="host-image" src={roomData.hostPicture} alt=""/>
                             </div>
 
                             <div className="reserve--info">
@@ -92,13 +118,7 @@ function Room() {
                                 </div>
 
                                 <div className="info--detailed">
-                                    <p>
-                                        The Chalet of the Valley is surrounded by nature, becoming the ideal refuge for those
-                                        looking for the fresh air of the mountains, pleasant climate, singing of birds and tranquility.
-                                        Our space has the best view of the surroundings, 3 STIs, lawn area, barbecue, wood stove,
-                                        sauna and beautiful garden. Located in a gated community in the middle of the Alfredo Chaves Atlantic Forest,
-                                        our wooden chalet is very cozy and boasts an unforgettable breathtaking view.
-                                    </p>
+                                    <p>{roomData.description}</p>
 
                                     <div className="show-more">
                                         <p>Show more</p>
@@ -111,7 +131,7 @@ function Room() {
                         <div className="reserve--price">
                             <div className="price-info">
                                 <div className="price">
-                                    <h1>$98 USD</h1>
+                                    <h1>${roomData.price} USD</h1>
                                     <h6>night</h6>
                                 </div>
 

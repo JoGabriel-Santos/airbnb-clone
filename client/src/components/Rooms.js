@@ -2,11 +2,15 @@ import React from "react";
 
 function Rooms({ roomInfo }) {
 
+    const redirectToRoom = () => {
+        window.location.href = `/room/${roomInfo._id}`;
+    };
+
     const randomLocation = () => Math.floor(Math.random() * 500) + 1;
-    const randomRating   = () => (Math.random() * 5).toFixed(1);
+    const randomRating = () => (Math.random() * 5).toFixed(1);
 
     return (
-        <div className="card-room">
+        <div className="card-room" onClick={redirectToRoom}>
             <img className="card-room--photo" src={roomInfo.images[0]} alt=""/>
 
             <div className="card-room--info-rating">

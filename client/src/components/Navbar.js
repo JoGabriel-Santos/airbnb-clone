@@ -40,7 +40,7 @@ function Navbar() {
     return (
         <React.Fragment>
             <header className={`header ${location.pathname === "/room" ? "header--room container" : ""}`}>
-                <a href="">
+                <a href="/">
                     {
                         !isSmallScreen ? (
                             <img className="logo" src={require("../util/images/logo.png")} alt=""/>
@@ -78,7 +78,7 @@ function Navbar() {
                 <div className="header-user">
                     {
                         location.pathname === "/" ?
-                            <h4 className="header-user--home">Airbnb your home</h4>
+                            <a href="/become-a-host" className="header-user--home">Airbnb your home</a>
                             :
                             <h4 className="header-user--home">Switch to hosting</h4>
                     }
